@@ -20,7 +20,7 @@
 // Grid for code blocks
 #set grid(columns: (2em, auto))
 // Table for math-code listing
-#set table(stroke: none, align: horizon + left, inset: 0pt, row-gutter: 0.5em)
+#set table(stroke: none, align: horizon + left, inset: 0pt, row-gutter: 0.45em)
 
 // LaTeX and TeX logos
 #let TeX = style(styles => {
@@ -39,11 +39,11 @@
 })
 
 // Update date
-#let date = "2023-03-24"
+#let date = "2023-03-25"
 
 // Unavailable (last check date)
 #show "??": box(text(red, [#date #emoji.crossmark]))
-// Not handy
+// Tricky
 #show "!!": box(text(blue, emoji.drops))
 // No idea
 #show "?!": box(text(orange, [No idea #emoji.face.unhappy]))
@@ -309,8 +309,7 @@ Fix the size with the `lr` function.
   ```,
 ))
 
-To have them grow with the enclosed formula, also use the `lr` function
-(although some of them scale by default).
+To have them grow with the enclosed formula, also use the `lr` function.
 
 #align(center, table(
   columns: 2,
@@ -318,6 +317,21 @@ To have them grow with the enclosed formula, also use the `lr` function
   $ lr(angle.l i, 2^(2^i) angle.r) $,
   ```
   lr(angle.l i, 2^(2^i) angle.r)
+  ```,
+))
+
+Fences scale by default if entered directly as codepoints, and don't scale automatically if entered as symbol notation.
+
+#align(center, table(
+  columns: 2,
+  column-gutter: 1em,
+  $ (1 / n^(alpha)) $,
+  ```
+  (1 / n^(alpha))
+  ```,
+  $ paren.l 1 / n^(alpha) paren.r $,
+  ```
+  paren.l 1 / n^(alpha) paren.r
   ```,
 ))
 
@@ -336,7 +350,7 @@ The `lr` function also allows to scale unmatched delimiters and one-side fences.
 In Typst, #link("https://typst.app/docs/reference/typst/array")[array] is a sequence of values,
 while in #LaTeX, array is a matrix without fences, which is @unavailable in Typst.
 
-Definition by cases can be easily obtained with the function `cases`.
+Definition by cases can be easily obtained with the `cases` function.
 
 #align(center, table(
   columns: 2,
