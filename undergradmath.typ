@@ -385,7 +385,7 @@ Improve $sqrt(2) x$ to $sqrt(2) thin x$ with a thin space, as in `sqrt(2) thin x
 Slightly wider are `medium` and `thick` (the three are in ratio $3 : 4 : 5$).
 Bigger space is `quad` for $arrow.r quad arrow.l$, which is useful between parts of a display.
 Get arbitrary space with the `h` function.
-For example, use `h(2em)` for `\qquad` in #LaTeX and `h(-0.1667em)` for `\!`.
+For example, use `#h(2em)` for `\qquad` in #LaTeX and `#h(-0.1667em)` for `\!`.
 
 = Displayed equations
 Display equations in a block level using `$ ... $` with at least one space separating the math content and the `$`.
