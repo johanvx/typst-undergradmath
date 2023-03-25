@@ -205,7 +205,7 @@ Get the set complement $A^(sans(c))$ with `A^(sans(c))` (or $A^(complement)$ wit
 If the decorated letter is $i$ or $j$ then some decorations need `\u{1D6A4}` @tricky and `\u{1D6A5}` @tricky, as in $arrow(\u{1D6A4})$ with `arrow(\u{1D6A4})`.
 Some authors use boldface for vectors: `bold(x)`.
 
-Entering `overline(x+y)` produces $overline(x+y)$, and `\widehat{x+y}` @unavailable.
+Entering `overline(x + y)` produces $overline(x + y)$, and `hat(x + y)` gives $hat(x + y)$.
 Comment on an expression as here (there is also `overbrace(..)`).
 
 #align(center, cell(

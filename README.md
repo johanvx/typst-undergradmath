@@ -18,13 +18,14 @@ The following limitations are also annotated in the [document](undergradmath.pdf
       https://www.ctan.org/tex-archive/fonts/newcomputermodern.
 - [ ] $\imath$ `\u{1D6A4}` and $\jmath$ `\u{1D6A5}`, from `\imath` and `\jmath` respectively, are not defined as symbols.
       They are used in like vectors $\vec{\imath}$ with `\vec{\imath}`.
-- [ ] $\widehat{x + y}$ from `\widehat{x + y}` is unavailable.
+- [x] ~$\widehat{x + y}$ from `\widehat{x + y}` is unavailable.~ It's automatic if you write `$hat(x+y)$`, as mentioned in [#2].
 - [ ] No idea with $\doteq$ from `\doteq`.
       Maybe use fonts from [mathabx] or do some spacing adjustment with `dot` and `eq`.
 - [ ] LaTeX arrays (i.e., matrices without fences) are unavailable, but it's easy to get them with the `grid` function.
       For math mode, it would be nice to add a new option `none` or `""` for `delim` of the `mat` function.
 - [ ] No idea with spacing between values and units. It would be really great to have something like [siunitx].
 
+[#2]: https://github.com/johanvx/typst-undergradmath/issues/2
 [mathabx]: https://www.ctan.org/tex-archive/fonts/mathabx
 [siunitx]: https://www.ctan.org/pkg/siunitx
 
