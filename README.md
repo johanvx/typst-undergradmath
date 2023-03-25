@@ -6,7 +6,10 @@
   </a>
 </p>
 
-A Typst port of [undergradmath].
+A [Typst] port of [undergradmath].
+
+[Typst]: https://github.com/typst/typst
+[undergradmath]: https://gitlab.com/jim.hefferon/undergradmath
 
 ## Limitations
 The following limitations are also annotated in the [document](undergradmath.pdf).
@@ -38,6 +41,4 @@ The following limitations are also annotated in the [document](undergradmath.pdf
 [cc-by-sa]: http://creativecommons.org/licenses/by-sa/4.0/
 [cc-by-sa-image]: https://licensebuttons.net/l/by-sa/4.0/88x31.png
 [cc-by-sa-shield]: https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg
-
-[undergradmath]: https://gitlab.com/jim.hefferon/undergradmath
 [Like undergradmath]: https://gitlab.com/jim.hefferon/undergradmath/-/blob/5b19eff74454f7c71664f85e8042d7b30fcf9cfb/LICENSE
