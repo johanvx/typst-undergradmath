@@ -378,7 +378,7 @@ Get a matrix with the `mat` function. You can pass an array to it.
   ```
 ))
 
-For the determinant use `|A|`, text operator $det$ `det` or `#set math.mat(delim: "|")`.
+For the determinant use `|A|`, text operator $det$ `det` or `mat(delim: "|", ..)`.
 
 = Spacing in mathematics
 Improve $sqrt(2) x$ to $sqrt(2) thin x$ with a thin space, as in `sqrt(2) thin x`.
