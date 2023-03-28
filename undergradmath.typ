@@ -39,7 +39,7 @@
 })
 
 // Update date
-#let date = "2023-03-25"
+#let date = "2023-03-28"
 
 // Unavailable (last check date)
 #show "??": box(text(red, [#date #emoji.crossmark]))
