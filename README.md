@@ -24,8 +24,9 @@ The following limitations are also annotated in the [document](undergradmath.pdf
 - [x] ~$\widehat{x + y}$ from `\widehat{x + y}` is unavailable.~ It's automatic if you write `$hat(x+y)$`, as mentioned in [#2].
 - [ ] No idea with $\doteq$ from `\doteq`.
       Maybe use fonts from [mathabx] or do some spacing adjustment with `dot` and `eq`.
-- [ ] LaTeX arrays (i.e., matrices without fences) are unavailable, but it's easy to get them with the `grid` function.
-      For math mode, it would be nice to add a new option `none` or `""` for `delim` of the `mat` function.
+- [x] ~LaTeX arrays (i.e., matrices without fences) are unavailable, but it's easy to get them with the `grid` function.
+      For math mode, it would be nice to add a new option `""` for `delim` of the `mat` function.~
+      It's actually available with `$mat(delim: #none, ..)$`.
 - [ ] No idea with spacing between values and units. It would be really great to have something like [siunitx].
 
 [#2]: https://github.com/johanvx/typst-undergradmath/issues/2
