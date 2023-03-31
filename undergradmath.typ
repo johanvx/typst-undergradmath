@@ -39,7 +39,7 @@
 })
 
 // Update date
-#let date = "2023-03-28"
+#let date = "2023-03-31"
 
 // Unavailable (last check date)
 #show "??": box(text(red, [#date #emoji.crossmark]))
@@ -347,8 +347,21 @@ The `lr` function also allows to scale unmatched delimiters and one-side fences.
 ))
 
 = Arrays, Matrices
+Get a matrix with the `mat` function. You can pass an array to it.
+
+#align(center, table(
+  columns: 2,
+  column-gutter: 1em,
+  $ mat(a, b; c, d) $,
+  ```
+  $ mat(a, b; c, d) $
+  ```
+))
+
 In Typst, #link("https://typst.app/docs/reference/typst/array")[array] is a sequence of values,
-while in #LaTeX, array is a matrix without fences, which is @unavailable in Typst.
+while in #LaTeX, array is a matrix without fences, which is `$mat(delim: #none, ..)$` in Typst.
+
+For the determinant use `|A|`, text operator $det$ `det` or `mat(delim: "|", ..)`.
 
 Definition by cases can be easily obtained with the `cases` function.
 
@@ -366,19 +379,6 @@ Definition by cases can be easily obtained with the `cases` function.
   ) $
   ```
 ))
-
-Get a matrix with the `mat` function. You can pass an array to it.
-
-#align(center, table(
-  columns: 2,
-  column-gutter: 1em,
-  $ mat(a, b; c, d) $,
-  ```
-  $ mat(a, b; c, d) $
-  ```
-))
-
-For the determinant use `|A|`, text operator $det$ `det` or `mat(delim: "|", ..)`.
 
 = Spacing in mathematics
 Improve $sqrt(2) x$ to $sqrt(2) thin x$ with a thin space, as in `sqrt(2) thin x`.
