@@ -255,7 +255,7 @@ Just type them!
   cell($succ$, `succ`), cell($dot.circle$, `dot.circle`), cell($circle.stroked.tiny$, `circle.stroked.tiny`),
   cell($succ.eq$, `succ.eq`), cell($times.circle$, `times.circle`), cell($star.op$, `star.op`),
   cell($prop$, `prop`), cell($\u{2298}$, [`\u{2298}` @tricky]), cell($sqrt("")$, `sqrt("")`),
-  [@noidea], cell($harpoon.tr$, `harpoon.tr`), cell($checkmark$, `checkmark`),
+  cell($\u{2250}$, [`\u{2250}` @tricky]), cell($harpoon.tr$, `harpoon.tr`), cell($checkmark$, `checkmark`),
 ))
 
 Use `a divides b` for the divides relation, $a divides b$, and `a divides.not b` for the negation, $a divides.not b$.
