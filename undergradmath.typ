@@ -244,7 +244,7 @@ Just type them!
   cell($<=$, [`<=`, `lt.eq`]), cell($angle.arc$, `angle.arc`), cell($plus.minus$, `plus.minus`),
   cell($>$, [`>`, `gt`]), cell($ell$, `ell`), cell($minus.plus$, `minus.plus`),
   cell($>=$, [`>=`, `gt.eq`]), cell($parallel$, `parallel`), cell($times$, `times`),
-  cell($eq.not$, `eq.not`), cell($45 degree$, `45 degree`), cell($div$, `div`),
+  cell($!=$, [`!=`, `eq.not`]), cell($45 degree$, `45 degree`), cell($div$, `div`),
   cell($<<$, [`<<`, `lt.double`]), cell($tilde.eqq$, `tilde.eqq`), cell($*$, [`*`, `ast.op`]),
   cell($>>$, [`>>`, `gt.double`]), cell($tilde.eqq.not$, `tilde.eqq.not`), cell($divides$, `divides`),
   cell($approx$, `approx`), cell($tilde.op$, `tilde.op`), cell($divides.not$, `divides.not`),
