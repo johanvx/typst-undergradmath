@@ -22,8 +22,9 @@ The following limitations are also annotated in the [document](undergradmath.pdf
 - [ ] $\imath$ `\u{1D6A4}` and $\jmath$ `\u{1D6A5}`, from `\imath` and `\jmath` respectively, are not defined as symbols.
       They are used in like vectors $\vec{\imath}$ with `\vec{\imath}`.
 - [x] ~$\widehat{x + y}$ from `\widehat{x + y}` is unavailable.~ It's automatic if you write `$hat(x+y)$`, as mentioned in [#2].
-- [ ] No idea with $\doteq$ from `\doteq`.
-      Maybe use fonts from [mathabx] or do some spacing adjustment with `dot` and `eq`.
+- [x] ~No idea with $\doteq$ from `\doteq`.
+      Maybe use fonts from [mathabx] or do some spacing adjustment with `dot` and `eq`.~
+      It can be obtained with `\u{2250}`, which is a bit tricky.
 - [x] ~LaTeX arrays (i.e., matrices without fences) are unavailable, but it's easy to get them with the `grid` function.
       For math mode, it would be nice to add a new option `""` for `delim` of the `mat` function.~
       It's actually available with `$mat(delim: #none, ..)$`.
