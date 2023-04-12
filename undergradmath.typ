@@ -188,10 +188,15 @@ Get the set complement $A^(sans(c))$ with `A^(sans(c))` (or $A^(complement)$ wit
 //       The Math fonts provide the character \varnothing, an alternative to \emptyset,
 //     through Character Variant cv01. The fontsetup package provides the option
 //     'varnothing' to easily switch to the alternative character.
-//
-/ Remark: The character $Ø$ from `\varnothing` in #LaTeX is an alternative character of $nothing$ from `nothing` in Typst (`\emptyset` in #LaTeX).
-  See the Version 3.93 section of README at #link("https://www.ctan.org/tex-archive/fonts/newcomputermodern").
-  You can create the `\varnothing` character with a `let` binding using specific fonts.
+
+// https://mirrors.sustech.edu.cn/CTAN/fonts/newcomputermodern/doc/newcm-doc.pdf
+// The NewComputerModern FontFamily §13.3
+// The Math fonts provide the character \varnothing (⌀, U+2300), as an alternative to \emptyset (a slashed zero), through Character Variant cv01.
+// The fontsetup package provides the option ‘varnothing’ to easily switch to the alternative character.
+
+/ Remark: Using `diameter` for `\varnothing` may cause some confusion. However, #LaTeX also uses $diameter$ (`\u{2300}`) instead of $\u{2205}$ (`\u{2205}`), see #link("https://mirrors.sustech.edu.cn/CTAN/fonts/newcomputermodern/doc/newcm-doc.pdf")[newcm $section$13.3].
+  Another solution is to use `text(font: "Fira Sans", nothing)`, but the resultant glyph $text(font: "Fira Sans", nothing)$ is subtly different from the widely used one.
+  Ultimately, The choice is always *your decision*.
 
 = Decorations
 #align(center, table(
