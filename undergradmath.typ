@@ -168,7 +168,7 @@ Getting script letters is @unavailable.
   cell($subset$, `subset`), cell($bb(Q)$, [`QQ`, `bb(Q)`]), cell($not$, `not`),
   cell($subset.eq$, `subset.eq`), cell($bb(N)$, [`NN`, `bb(N)`]), cell($or$, `or`),
   cell($supset$, `supset`), cell($bb(C)$, [`CC`, `bb(C)`]), cell($and$, `and`),
-  cell($supset.eq$, `supset.eq`), cell($Ø$, [`Ø`@tricky]), cell($tack.r$, `tack.r`),
+  cell($supset.eq$, `supset.eq`), cell($diameter$, [`diameter`]), cell($tack.r$, `tack.r`),
   cell($in$, `in`), cell($nothing$, `nothing`), cell($models$, `models`),
   cell($in.not$, `in.not`), cell($alef$, `alef`), cell($without$, `without`),
 ))
