@@ -16,9 +16,10 @@ The following limitations are also annotated in the [document](undergradmath.pdf
 
 - [ ] Script letters, such as $\mathscr{P}$ form `\mathscr{P}`, are unavailable.
 - [ ] Greek letter $\varsigma$ `\u{03C2}` from `\varsigma` is not defined as a symbol and should probably be defined as `sigma.alt`.
-- [ ] $\emptyset$ from `\emptyset` is available in Typst as `nothing`, while $\varnothing$ from `\varnothing` is not.
-      May need a `let` binding with some specific fonts. See the Version 3.93 section of README at
-      https://www.ctan.org/tex-archive/fonts/newcomputermodern.
+- [x] $\emptyset$ from `\emptyset` is available in Typst as `nothing`, while $\varnothing$ from `\varnothing` is not.
+      May need a `let` binding with some specific fonts.
+      See the Version 3.93 section of README at https://www.ctan.org/tex-archive/fonts/newcomputermodern.
+      See also [#10] and [#16] for details.
 - [ ] $\imath$ `\u{1D6A4}` and $\jmath$ `\u{1D6A5}`, from `\imath` and `\jmath` respectively, are not defined as symbols.
       They are used in like vectors $\vec{\imath}$ with `\vec{\imath}`.
 - [x] ~$\widehat{x + y}$ from `\widehat{x + y}` is unavailable.~ It's automatic if you write `$hat(x+y)$`, as mentioned in [#2].
@@ -31,6 +32,8 @@ The following limitations are also annotated in the [document](undergradmath.pdf
 - [ ] No idea with spacing between values and units. It would be really great to have something like [siunitx].
 
 [#2]: https://github.com/johanvx/typst-undergradmath/issues/2
+[#10]: https://github.com/johanvx/typst-undergradmath/issues/10
+[#16]: https://github.com/johanvx/typst-undergradmath/pull/16
 [mathabx]: https://www.ctan.org/tex-archive/fonts/mathabx
 [siunitx]: https://www.ctan.org/pkg/siunitx
 
