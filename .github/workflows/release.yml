@@ -1,0 +1,35 @@
+name: Release
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  release:
+    runs-on: macos-latest
+    permissions:
+      contents: write
+    env:
+      TYPST_ARCH: typst-x86_64-apple-darwin
+    steps:
+      - uses: actions/checkout@v3
+      - name: Update Homebrew
+        run: brew update
+      - name: Install Typst
+        run: brew install typst
+      - name: Install fonts
+        run: |
+          brew tap homebrew/cask-fonts
+          brew install --cask font-twitter-color-emoji
+      - name: Build PDF
+        run: typst compile undergradmath.typ
+      - name: Upload PDF as artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: Undergradmath
+          path: undergradmath.pdf
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          name: ${{ github.ref_name }}
+          files: undergradmath.pdf
