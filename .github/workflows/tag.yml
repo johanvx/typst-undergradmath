@@ -1,0 +1,27 @@
+name: Tag
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  check-changed:
+    runs-on: macos-latest
+    outputs:
+      modified_files: ${{ steps.changed-files.outputs.modified_files }}
+    steps:
+      - uses: actions/checkout@v3
+      - id: changed-files
+        uses: tj-actions/changed-files@v35
+
+  add-tag:
+    runs-on: macos-latest
+    needs: check-changed
+    if: github.event_name == 'workflow_dispatch' ||
+        contains(needs.check-changed.outputs.modified_files, 'undergradmath.typ')
+    steps:
+      - uses: actions/checkout@v3
+      - uses: mathieudutour/github-tag-action@v6.1
+        with:
+          github_token: ${{ secrets.PAT }}
