@@ -1,0 +1,39 @@
+name: Watch
+on:
+  push:
+    branches-ignore:
+      - main
+
+jobs:
+  check-changed:
+    runs-on: macos-latest
+    outputs:
+      modified_files: ${{ steps.changed-files.outputs.modified_files }}
+    steps:
+      - uses: actions/checkout@v3
+      - id: changed-files
+        uses: tj-actions/changed-files@v35
+
+  build-pdf:
+    runs-on: macos-latest
+    needs: check-changed
+    if: contains(needs.check-changed.outputs.modified_files, 'undergradmath.typ')
+    env:
+      TYPST_ARCH: typst-x86_64-apple-darwin
+    steps:
+      - uses: actions/checkout@v3
+      - name: Update Homebrew
+        run: brew update
+      - name: Install Typst
+        run: brew install typst
+      - name: Install fonts
+        run: |
+          brew tap homebrew/cask-fonts
+          brew install --cask font-twitter-color-emoji
+      - name: Build PDF
+        run: typst compile undergradmath.typ
+      - name: Upload PDF as artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: Undergradmath
+          path: undergradmath.pdf
