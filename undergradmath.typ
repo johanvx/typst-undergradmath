@@ -39,7 +39,7 @@
 })
 
 // Update date
-#let date = "2023-03-31"
+#let date = "2023-04-27"
 
 // Unavailable (last check date)
 #show "??": box(text(red, [#date #emoji.crossmark]))
@@ -245,20 +245,20 @@ Just type them!
 #align(center, table(
   columns: 3,
   column-gutter: 1.2em,
-  cell($<$, [`<`, `lt`]), cell($angle$, `angle`), cell($dot.op$, `dot.op`),
+  cell($<$, [`<`, `lt`]), cell($angle$, `angle`), cell($dot$, [`dot`]),
   cell($<=$, [`<=`, `lt.eq`]), cell($angle.arc$, `angle.arc`), cell($plus.minus$, `plus.minus`),
   cell($>$, [`>`, `gt`]), cell($ell$, `ell`), cell($minus.plus$, `minus.plus`),
   cell($>=$, [`>=`, `gt.eq`]), cell($parallel$, `parallel`), cell($times$, `times`),
   cell($!=$, [`!=`, `eq.not`]), cell($45 degree$, `45 degree`), cell($div$, `div`),
-  cell($<<$, [`<<`, `lt.double`]), cell($tilde.eqq$, `tilde.eqq`), cell($*$, [`*`, `ast.op`]),
+  cell($<<$, [`<<`, `lt.double`]), cell($tilde.eqq$, `tilde.eqq`), cell($*$, [`*`, `ast`]),
   cell($>>$, [`>>`, `gt.double`]), cell($tilde.eqq.not$, `tilde.eqq.not`), cell($divides$, `divides`),
-  cell($approx$, `approx`), cell($tilde.op$, `tilde.op`), cell($divides.not$, `divides.not`),
+  cell($approx$, `approx`), cell($tilde$, `tilde`), cell($divides.not$, `divides.not`),
   cell($\u{224D}$, [`\u{224D}` @tricky]), cell($tilde.eq$, `tilde.eq`), cell($n!$, `n!`),
   cell($ident$, `ident`), cell($tilde.not$, `tilde.not`), cell($diff$, `diff`),
   cell($prec$, `prec`), cell($plus.circle$, `plus.circle`), cell($nabla$, `nabla`),
   cell($prec.eq$, `prec.eq`), cell($minus.circle$, `minus.cirle`), cell($planck.reduce$, `planck.reduce`),
   cell($succ$, `succ`), cell($dot.circle$, `dot.circle`), cell($circle.stroked.tiny$, `circle.stroked.tiny`),
-  cell($succ.eq$, `succ.eq`), cell($times.circle$, `times.circle`), cell($star.op$, `star.op`),
+  cell($succ.eq$, `succ.eq`), cell($times.circle$, `times.circle`), cell($star$, `star`),
   cell($prop$, `prop`), cell($\u{2298}$, [`\u{2298}` @tricky]), cell($sqrt("")$, `sqrt("")`),
   cell($\u{2250}$, [`\u{2250}` @tricky]), cell($harpoon.tr$, `harpoon.tr`), cell($checkmark$, `checkmark`),
 ))
@@ -375,12 +375,12 @@ Definition by cases can be easily obtained with the `cases` function.
   column-gutter: 1em,
   $ f_n = cases(
     a &"if" n = 0,
-    r dot.op f_(n - 1) &"else"
+    r dot f_(n - 1) &"else"
   ) $,
   ```
   $ f_n = cases(
     a &"if" n = 0,
-    r dot.op f_(n - 1) &"else"
+    r dot f_(n - 1) &"else"
   ) $
   ```
 ))
@@ -398,9 +398,9 @@ Display equations in a block level using `$ ... $` with at least one space separ
 #align(center, table(
   columns: 2,
   column-gutter: 1em,
-  $ S = k dot.op lg W $,
+  $ S = k dot lg W $,
   ```
-  $ S = k dot.op lg W $
+  $ S = k dot lg W $
   ```,
 ))
 
@@ -422,11 +422,11 @@ Align equations using `&`
 #align(center, table(
   columns: 2,
   column-gutter: 1em,
-  $ nabla dot.op bold(D) &= rho \
-    nabla dot.op bold(B) &= 0 $,
+  $ nabla dot bold(D) &= rho \
+    nabla dot bold(B) &= 0 $,
   ```
-  $ nabla dot.op bold(D) &= rho \
-    nabla dot.op bold(B) &= 0 $
+  $ nabla dot bold(D) &= rho \
+    nabla dot bold(B) &= 0 $
   ```,
 ))
 
