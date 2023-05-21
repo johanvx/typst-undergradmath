@@ -1,18 +1,12 @@
 # typst-undergradmath
-
-<p align="center">
-  <a href="http://creativecommons.org/licenses/by-sa/4.0/">
-    <img alt="CC BY-SA 4.0" src="https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg" />
-  </a>
-</p>
+[![CC BY-SA 4.0](https://badgers.space/github/license/johanvx/typst-undergradmath)][cc-by-sa]
+[![Latest release](https://badgers.space/github/release/johanvx/typst-undergradmath)][latest-release]
+![Checks status](https://badgers.space/github/checks/johanvx/typst-undergradmath)
 
 A [Typst] port of [undergradmath].
 
-[Typst]: https://github.com/typst/typst
-[undergradmath]: https://gitlab.com/jim.hefferon/undergradmath
-
 ## Limitations
-The following limitations are also annotated in the [document](https://github.com/johanvx/typst-undergradmath/releases/latest).
+The following limitations are also annotated in the [document][latest-release].
 
 - [ ] Script letters, such as $\mathscr{P}$ form `\mathscr{P}`, are unavailable.
 - [ ] Greek letter $\varsigma$ `\u{03C2}` from `\varsigma` is not defined as a symbol and should probably be defined as `sigma.alt`.
@@ -31,19 +25,18 @@ The following limitations are also annotated in the [document](https://github.co
       It's actually available with `$mat(delim: #none, ..)$`.
 - [ ] No idea with spacing between values and units. It would be really great to have something like [siunitx].
 
+## License
+[Like undergradmath], typst-undergradmath is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License][cc-by-sa].
+
+<!-- Links -->
+
 [#2]: https://github.com/johanvx/typst-undergradmath/issues/2
 [#10]: https://github.com/johanvx/typst-undergradmath/issues/10
 [#16]: https://github.com/johanvx/typst-undergradmath/pull/16
+[cc-by-sa]: http://creativecommons.org/licenses/by-sa/4.0/
+[latest-release]: https://github.com/johanvx/typst-undergradmath/releases/latest
+[Like undergradmath]: https://gitlab.com/jim.hefferon/undergradmath/-/blob/5b19eff74454f7c71664f85e8042d7b30fcf9cfb/LICENSE
 [mathabx]: https://www.ctan.org/tex-archive/fonts/mathabx
 [siunitx]: https://www.ctan.org/pkg/siunitx
-
-## License
-[Like undergradmath], typst-undergradmath is licensed under the
-[Creative Commons Attribution-ShareAlike 4.0 International License][cc-by-sa].
-
-[![CC BY-SA 4.0][cc-by-sa-image]][cc-by-sa]
-
-[cc-by-sa]: http://creativecommons.org/licenses/by-sa/4.0/
-[cc-by-sa-image]: https://licensebuttons.net/l/by-sa/4.0/88x31.png
-[cc-by-sa-shield]: https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg
-[Like undergradmath]: https://gitlab.com/jim.hefferon/undergradmath/-/blob/5b19eff74454f7c71664f85e8042d7b30fcf9cfb/LICENSE
+[Typst]: https://github.com/typst/typst
+[undergradmath]: https://gitlab.com/jim.hefferon/undergradmath
