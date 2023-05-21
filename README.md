@@ -12,7 +12,7 @@ A [Typst] port of [undergradmath].
 [undergradmath]: https://gitlab.com/jim.hefferon/undergradmath
 
 ## Limitations
-The following limitations are also annotated in the [document](undergradmath.pdf).
+The following limitations are also annotated in the [document](https://github.com/johanvx/typst-undergradmath/releases/latest).
 
 - [ ] Script letters, such as $\mathscr{P}$ form `\mathscr{P}`, are unavailable.
 - [ ] Greek letter $\varsigma$ `\u{03C2}` from `\varsigma` is not defined as a symbol and should probably be defined as `sigma.alt`.
