@@ -11,13 +11,13 @@ The following limitations are also annotated in the [document][latest-release].
 - [ ] Script letters, such as $\mathscr{P}$ form `\mathscr{P}`, are unavailable.
 - [x] ~Greek letter $\varsigma$ `\u{03C2}` from `\varsigma` is not defined as a symbol and should probably be defined as `sigma.alt`.~
       `sigma.alt` is available as from `typst v0.5.0`.
-      See [typst/typst/pull/1203].
 - [x] $\emptyset$ from `\emptyset` is available in Typst as `nothing`, while $\varnothing$ from `\varnothing` is not.
       May need a `let` binding with some specific fonts.
       See the Version 3.93 section of README at https://www.ctan.org/tex-archive/fonts/newcomputermodern.
       See also [#10] and [#16] for details.
-- [ ] $\imath$ `\u{1D6A4}` and $\jmath$ `\u{1D6A5}`, from `\imath` and `\jmath` respectively, are not defined as symbols.
-      They are used in like vectors $\vec{\imath}$ with `\vec{\imath}`.
+- [x] ~$\imath$ `\u{1D6A4}` and $\jmath$ `\u{1D6A5}`, from `\imath` and `\jmath` respectively, are not defined as symbols.
+      They are used in like vectors $\vec{\imath}$ with `\vec{\imath}`.~
+      $\imath$ and $\jmath$ are `dotless.i` and `dotless.j` respectively as from `typst v0.4.0`.
 - [x] ~$\widehat{x + y}$ from `\widehat{x + y}` is unavailable.~ It's automatic if you write `$hat(x+y)$`, as mentioned in [#2].
 - [x] ~No idea with $\doteq$ from `\doteq`.
       Maybe use fonts from [mathabx] or do some spacing adjustment with `dot` and `eq`.~
@@ -40,6 +40,5 @@ The following limitations are also annotated in the [document][latest-release].
 [Like undergradmath]: https://gitlab.com/jim.hefferon/undergradmath/-/blob/5b19eff74454f7c71664f85e8042d7b30fcf9cfb/LICENSE
 [mathabx]: https://www.ctan.org/tex-archive/fonts/mathabx
 [siunitx]: https://www.ctan.org/pkg/siunitx
-[typst/typst/pull/1203]: https://github.com/typst/typst/pull/1203
 [Typst]: https://github.com/typst/typst
 [undergradmath]: https://gitlab.com/jim.hefferon/undergradmath
