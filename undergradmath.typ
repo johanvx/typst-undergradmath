@@ -207,7 +207,7 @@ Get the set complement $A^(sans(c))$ with `A^(sans(c))` (or $A^(complement)$ wit
   cell($Sigma^*$, `Sigma^*`), cell($hat(a)$, `hat(a)`), cell($arrow(a)$, `arrow(a)`),
 ))
 
-If the decorated letter is $i$ or $j$ then some decorations need `\u{1D6A4}` @tricky and `\u{1D6A5}` @tricky, as in $arrow(\u{1D6A4})$ with `arrow(\u{1D6A4})`.
+If the decorated letter is $i$ or $j$ then some decorations need `dotless.i` and `dotless.j`, as in $arrow(dotless.i)$ with `arrow(dotless.i)`.
 Some authors use boldface for vectors: `bold(x)`.
 
 Entering `overline(x + y)` produces $overline(x + y)$, and `hat(x + y)` gives $hat(x + y)$.
