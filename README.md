@@ -9,7 +9,9 @@ A [Typst] port of [undergradmath].
 The following limitations are also annotated in the [document][latest-release].
 
 - [ ] Script letters, such as $\mathscr{P}$ form `\mathscr{P}`, are unavailable.
-- [ ] Greek letter $\varsigma$ `\u{03C2}` from `\varsigma` is not defined as a symbol and should probably be defined as `sigma.alt`.
+- [x] ~Greek letter $\varsigma$ `\u{03C2}` from `\varsigma` is not defined as a symbol and should probably be defined as `sigma.alt`.~
+      `sigma.alt` is available as from `typst v0.5.0`.
+      See [typst/typst/pull/1203].
 - [x] $\emptyset$ from `\emptyset` is available in Typst as `nothing`, while $\varnothing$ from `\varnothing` is not.
       May need a `let` binding with some specific fonts.
       See the Version 3.93 section of README at https://www.ctan.org/tex-archive/fonts/newcomputermodern.
@@ -38,5 +40,6 @@ The following limitations are also annotated in the [document][latest-release].
 [Like undergradmath]: https://gitlab.com/jim.hefferon/undergradmath/-/blob/5b19eff74454f7c71664f85e8042d7b30fcf9cfb/LICENSE
 [mathabx]: https://www.ctan.org/tex-archive/fonts/mathabx
 [siunitx]: https://www.ctan.org/pkg/siunitx
+[typst/typst/pull/1203]: https://github.com/typst/typst/pull/1203
 [Typst]: https://github.com/typst/typst
 [undergradmath]: https://gitlab.com/jim.hefferon/undergradmath

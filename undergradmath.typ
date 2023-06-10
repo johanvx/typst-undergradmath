@@ -149,7 +149,7 @@ Getting script letters is @unavailable.
   cell($epsilon.alt$, `epsilon.alt`), cell($rho$, `rho`),
   cell($epsilon$, `epsilon`), cell($rho.alt$, `rho.alt`),
   cell($zeta$, `zeta`), cell([$sigma$, $Sigma$], [`sigma`, `Sigma`]),
-  cell($eta$, `eta`), cell($\u{03C2}$, [`\u{03C2}` @tricky]),
+  cell($eta$, `eta`), cell($sigma.alt$, `sigma.alt`),
   cell([$theta$, $Theta$], [`theta`, `Theta`]), cell($tau$, `tau`),
   cell($theta.alt$, `theta.alt`), cell([$upsilon$, $Upsilon$], [`upsilon`, `Upsilon`]),
   cell($iota$, `iota`), cell([$phi.alt$, $Phi$], [`phi.alt`, `Phi`]),
