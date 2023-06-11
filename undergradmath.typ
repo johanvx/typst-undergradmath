@@ -153,7 +153,7 @@ Getting script letters is @unavailable.
   cell([$theta$, $Theta$], [`theta`, `Theta`]), cell($tau$, `tau`),
   cell($theta.alt$, `theta.alt`), cell([$upsilon$, $Upsilon$], [`upsilon`, `Upsilon`]),
   cell($iota$, `iota`), cell([$phi.alt$, $Phi$], [`phi.alt`, `Phi`]),
-  cell($kappa$, $Kappa$), cell($phi$, `phi`),
+  cell($kappa$, `kappa`), cell($phi$, `phi`),
   cell([$lambda$, $Lambda$], [`lambda`, `Lambda`]), cell($chi$, `chi`),
   cell($mu$, `mu`), cell([$psi$, $Psi$], [`psi`, `Psi`]),
   cell($nu$, `nu`), cell([$omega$, $Omega$], [`omega`, `Omega`]),
