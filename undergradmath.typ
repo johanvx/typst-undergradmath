@@ -100,12 +100,12 @@ The original version is available at #link("https://gitlab.com/jim.hefferon/unde
     [!!], [Get this in a tricky way. Need a simpler method.],
   )
 ) <tricky>
-#figure(
-  table(
-    columns: (1fr, 2fr),
-    [?!], [Don't know how to get this.],
-  )
-) <noidea>
+// #figure(
+//   table(
+//     columns: (1fr, 2fr),
+//     [?!], [Don't know how to get this.],
+//   )
+// ) <noidea>
 
 = Rule One
 Any mathematics at all, even a single character, gets a mathematical setting.
