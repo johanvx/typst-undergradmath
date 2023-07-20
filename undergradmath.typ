@@ -395,7 +395,7 @@ Get a matrix with the `mat` function. You can pass an array to it.
   ],
 ))
 
-In Typst, #link("https://typst.app/docs/reference/typst/array")[array] is a sequence of values,
+In Typst, #link("https://typst.app/docs/reference/types/array")[array] is a sequence of values,
 while in #LaTeX, array is a matrix without fences, which is `$mat(delim: #none, ..)$` in Typst.
 
 For the determinant use `|A|`, text operator $det$ `det` or `mat(delim: "|", ..)`.
