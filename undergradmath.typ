@@ -57,9 +57,6 @@
 // Justified paragraphs
 #set par(justify: true)
 
-// Two-column body
-#show: rest => columns(2, rest)
-
 // headcolor
 #let headcolor = rgb("004225")
 
@@ -76,13 +73,16 @@
 // Black raw code
 #show raw.where(block: false): it => { it.text }
 
+// Put this here to avoid affecting the title
+#show link: underline
+
+// Two-column layout
+#show: rest => columns(2, rest)
+
 // Title
 #align(center, link("https://github.com/johanvx/typst-undergradmath")[
   #text(large, headcolor)[*Typst Math for Undergrads*]
 ])
-
-// Put this here to avoid affecting the title
-#show link: underline
 
 This is a Typst port of _#LaTeX Math for Undergrads_ by Jim Hefferon.
 The original version is available at #link("https://gitlab.com/jim.hefferon/undergradmath").
@@ -91,13 +91,13 @@ The original version is available at #link("https://gitlab.com/jim.hefferon/unde
 #figure(
   table(
     columns: (1fr, 2fr),
-    [??], [This is unavailable. Last check date is #date.],
+    [??], [Unavailable. Last check on #date.],
   )
 ) <unavailable>
 #figure(
   table(
     columns: (1fr, 2fr),
-    [!!], [Get this in a tricky way. Need a simpler method.],
+    [!!], [Tricky. A simpler method is needed.],
   )
 ) <tricky>
 // #figure(
@@ -262,11 +262,11 @@ Just type them!
   [$>$], [`>`, `gt`], [$ell$], [`ell`], [$minus.plus$], [`minus.plus`],
   [$>=$], [`>=`, `gt.eq`], [$parallel$], [`parallel`], [$times$], [`times`],
   [$!=$], [`!=`, `eq.not`], [$45 degree$], [`45 degree`], [$div$], [`div`],
-  [$<<$], [`<<`, `lt.double`], [$tilde.eqq$], [`tilde.eqq`], [$*$], [`*`, `ast`],
-  [$>>$], [`>>`, `gt.double`], [$tilde.eqq.not$], [`tilde.eqq.not`], [$divides$], [`divides`],
+  [$<<$], [`<<`, `lt.double`], [$tilde.equiv$], [`tilde.equiv`], [$*$], [`*`, `ast`],
+  [$>>$], [`>>`, `gt.double`], [$tilde.nequiv$], [`tilde.nequiv`], [$divides$], [`divides`],
   [$approx$], [`approx`], [$tilde$], [`tilde`], [$divides.not$], [`divides.not`],
   [$\u{224D}$], [`\u{224D}` @tricky], [$tilde.eq$], [`tilde.eq`], [$n!$], [`n!`],
-  [$ident$], [`ident`], [$tilde.not$], [`tilde.not`], [$diff$], [`diff`],
+  [$equiv$], [`equiv`], [$tilde.not$], [`tilde.not`], [$diff$], [`diff`],
   [$prec$], [`prec`], [$plus.circle$], [`plus.circle`], [$nabla$], [`nabla`],
   [$prec.eq$], [`prec.eq`], [$minus.circle$], [`minus.cirle`], [$planck.reduce$], [`planck.reduce`],
   [$succ$], [`succ`], [$dot.circle$], [`dot.circle`], [$compose$], [`compose`],
@@ -512,7 +512,7 @@ The last three here are display style.
 ))
 
 = Discrete mathematics examples
-For modulo, there is a symbol $ident$ from `ident` and a text operator $mod$ from `mod`.
+For modulo, there is a symbol $equiv$ from `equiv` and a text operator $mod$ from `mod`.
 
 For combinations the binomial symbol $binom(n, k)$ is from `binom(n, k)`.
 This resizes to be bigger in a display.
@@ -556,6 +556,7 @@ See also the Typst Documentation at #link("https://typst.app/docs").
 #v(1fr)
 
 #block(
-  line(length: 100%, stroke: headcolor) +
+  inset: 4pt,
+  stroke: (top: headcolor),
   text(headcolor)[johanvx (https://github.com/johanvx) #h(1fr) #date]
 )
