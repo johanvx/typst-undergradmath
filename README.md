@@ -25,7 +25,8 @@ The following limitations are also annotated in the [document][latest-release].
 - [x] ~LaTeX arrays (i.e., matrices without fences) are unavailable, but it's easy to get them with the `grid` function.
       For math mode, it would be nice to add a new option `""` for `delim` of the `mat` function.~
       It's actually available with `$mat(delim: #none, ..)$`.
-- [ ] No idea with spacing between values and units. It would be really great to have something like [siunitx].
+- [ ] ~No idea with spacing between values and units. It would be really great to have something like [siunitx].~
+      There are in fact some amazing Typst ports of siunitx, such as [metro] and [unify].
 
 ## License
 [Like undergradmath], typst-undergradmath is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License][cc-by-sa].
@@ -35,10 +36,12 @@ The following limitations are also annotated in the [document][latest-release].
 [#2]: https://github.com/johanvx/typst-undergradmath/issues/2
 [#10]: https://github.com/johanvx/typst-undergradmath/issues/10
 [#16]: https://github.com/johanvx/typst-undergradmath/pull/16
+[Like undergradmath]: https://gitlab.com/jim.hefferon/undergradmath/-/blob/5b19eff74454f7c71664f85e8042d7b30fcf9cfb/LICENSE
+[Typst]: https://github.com/typst/typst
 [cc-by-sa]: http://creativecommons.org/licenses/by-sa/4.0/
 [latest-release]: https://github.com/johanvx/typst-undergradmath/releases/latest
-[Like undergradmath]: https://gitlab.com/jim.hefferon/undergradmath/-/blob/5b19eff74454f7c71664f85e8042d7b30fcf9cfb/LICENSE
 [mathabx]: https://www.ctan.org/tex-archive/fonts/mathabx
+[metro]: https://github.com/fenjalien/metro
 [siunitx]: https://www.ctan.org/pkg/siunitx
-[Typst]: https://github.com/typst/typst
 [undergradmath]: https://gitlab.com/jim.hefferon/undergradmath
+[unify]: https://github.com/ChHecker/unify
