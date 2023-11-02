@@ -13,7 +13,6 @@
 // Some horizontal spacing
 #let kern(length) = h(length, weak: true)
 #let enspace = kern(0.5em)
-#let qquad = h(2em)
 
 // For table/grid, something like "lhs \enspace rhs"
 #let cell(lhs, rhs) = box(lhs + enspace + rhs)
@@ -308,7 +307,7 @@ The right arrows in the first column have matching left arrows, such as `arrow.l
 = Variable-sized operators
 The summation $sum_(j = 0)^3 j^2$ `sum_(j = 0)^3 j^2` and the integral $integral_(x = 0)^3 x^2 dif x$ `integral_(x = 0)^3 x^2 dif x` expand when displayed.
 
-$ sum_(j = 0)^3 j^2 qquad integral_(x = 0)^3 x^2 dif x $
+$ sum_(j = 0)^3 j^2 wide integral_(x = 0)^3 x^2 dif x $
 
 These do the same.
 
@@ -435,9 +434,9 @@ Definition by cases can be easily obtained with the `cases` function.
 = Spacing in mathematics
 Improve $sqrt(2) x$ to $sqrt(2) thin x$ with a thin space, as in `sqrt(2) thin x`.
 Slightly wider are `medium` and `thick` (the three are in ratio $3 : 4 : 5$).
-Bigger space is `quad` for $arrow.r quad arrow.l$, which is useful between parts of a display.
+Bigger space are: `quad` for $-> quad <-$ and `wide` for $-> wide <-$, which are useful between parts of a display.
 Get arbitrary space with the `h` function.
-For example, use `#h(2em)` for `\qquad` in #LaTeX and `#h(-0.1667em)` for `\!`.
+For example, use `#h(-0.1667em)` for `\!` in #LaTeX.
 
 = Displayed equations
 Display equations in a block level using `$ ... $` with at least one space separating the math content and the `$`.
