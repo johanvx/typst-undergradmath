@@ -41,7 +41,7 @@
 #let date = datetime.today().display()
 
 // Unavailable (last check date)
-#show "??": box(text(red, [#date #emoji.crossmark]))
+#show "??": box(text(red, [v#sys.version #emoji.crossmark]))
 // Tricky
 #show "!!": box(text(blue, emoji.drops))
 // No idea
@@ -90,7 +90,7 @@ The original version is available at #link("https://gitlab.com/jim.hefferon/unde
 #figure(
   table(
     columns: (1fr, 2fr),
-    [??], [Unavailable. Last check on #date.],
+    [??], [Unavailable until typst #sys.version.],
   )
 ) <unavailable>
 #figure(
