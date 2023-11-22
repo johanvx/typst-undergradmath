@@ -18,8 +18,6 @@ jobs:
     runs-on: macos-latest
     needs: check-changed
     if: contains(needs.check-changed.outputs.modified_files, 'undergradmath.typ')
-    env:
-      TYPST_ARCH: typst-x86_64-apple-darwin
     steps:
       - uses: actions/checkout@v3
       - name: Update Homebrew
