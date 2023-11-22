@@ -1,27 +1,81 @@
 name: Tag
 on:
-  push:
-    branches:
-      - main
   workflow_dispatch:
-
+    inputs:
+      version:
+        description: "SemVer, use automatically generated version if omitted"
+        type: string
 jobs:
-  check-changed:
+  check-version:
     runs-on: macos-latest
     outputs:
-      modified_files: ${{ steps.changed-files.outputs.modified_files }}
+      modified: ${{ contains(steps.changed-files.outputs.modified_files, 'undergradmath.typ') }}
+      version: ${{ steps.output-version.outputs.version }}
     steps:
-      - uses: actions/checkout@v3
-      - id: changed-files
-        uses: tj-actions/changed-files@v35
-
-  add-tag:
-    runs-on: macos-latest
-    needs: check-changed
-    if: github.event_name == 'workflow_dispatch' ||
-        contains(needs.check-changed.outputs.modified_files, 'undergradmath.typ')
-    steps:
-      - uses: actions/checkout@v3
-      - uses: mathieudutour/github-tag-action@v6.1
+      - name: Checkout
+        uses: actions/checkout@v4
         with:
+          fetch-depth: 0
+          fetch-tags: true
+      - name: Get previous tag
+        id: check-tag
+        uses: mathieudutour/github-tag-action@v6.1
+        with:
+          dry_run: true
+          github_token: ${{ secrets.PAT }}
+      - name: Get base
+        id: get-base
+        run: |
+          echo -n "base=" >> $GITHUB_OUTPUT
+          git rev-list -n 1 "tags/${{ steps.check-tag.outputs.previous_tag }}" >> $GITHUB_OUTPUT
+      - name: Check changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v40
+        with:
+          base_sha: ${{ steps.get-base.outputs.base }}
+      - name: Output the version
+        id: output-version
+        run: |
+          if [[ -n "${{ inputs.version }}" ]]; then
+            echo "version=${{ inputs.version }}" >> $GITHUB_OUTPUT
+          else
+            echo "version=${{ steps.check-tag.outputs.new_version }}" >> $GITHUB_OUTPUT
+          fi
+      - name: List all modified files
+        run: |
+          echo "List all the files that have been modified: ${{ steps.changed-files.outputs.modified_files }}"
+  tag-changelog:
+    runs-on: macos-latest
+    needs: check-version
+    if: needs.check-version.outputs.modified == 'true'
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          fetch-tags: true
+      - name: Update Homebrew
+        run: brew update
+      - name: Install git-cliff
+        run: brew install git-cliff
+      - name: Generate changelog
+        id: generate-changelog
+        run: |
+          git cliff -vv -t ${{ needs.check-version.outputs.version }} -o CHANGELOG.md
+      - name: Add changelog and commit
+        id: add-changelog
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: 'CHANGELOG.md'
+          author_name: github-actions[bot]
+          author_email: 41898282+github-actions[bot]@users.noreply.github.com
+          message: "release: update changelog for ${{ needs.check-version.outputs.version }} release"
+      - name: Add tag
+        uses: mathieudutour/github-tag-action@v6.1
+        if: steps.add-changelog.outputs.committed == 'true'
+        with:
+          commit_sha: ${{ steps.add-changelog.outputs.commit_long_sha }}
+          custom_tag: ${{ needs.check-version.outputs.version }}
           github_token: ${{ secrets.PAT }}

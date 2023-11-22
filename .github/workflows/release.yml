@@ -3,14 +3,17 @@ on:
   push:
     tags:
       - 'v*.*.*'
-
 jobs:
   release:
     runs-on: macos-latest
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          fetch-tags: true
       - name: Update Homebrew
         run: brew update
       - name: Install Typst
@@ -26,8 +29,21 @@ jobs:
         with:
           name: Undergradmath
           path: undergradmath.pdf
+      - name: Install git-cliff
+        run: brew install git-cliff
+      - name: Generate changelog
+        id: generate-changelog
+        run: |
+          echo "changelog<<EOF" >> $GITHUB_OUTPUT
+          git cliff -vv -s all -l >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+          git cliff -vv -s all -l
+      - name: Print changelog
+        run: |
+          echo "${{ steps.generate-changelog.outputs.changelog }}"
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
+          body: ${{ steps.generate-changelog.outputs.changelog }}
           name: ${{ github.ref_name }}
           files: undergradmath.pdf
