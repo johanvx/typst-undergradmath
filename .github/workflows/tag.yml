@@ -56,6 +56,7 @@ jobs:
         with:
           fetch-depth: 0
           fetch-tags: true
+          token: ${{ secrets.PAT }}
       - name: Update Homebrew
         run: brew update
       - name: Install git-cliff
