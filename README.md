@@ -1,4 +1,5 @@
 # typst-undergradmath
+
 [![CC BY-SA 4.0](https://badgers.space/github/license/johanvx/typst-undergradmath)][cc-by-sa]
 [![Latest release](https://badgers.space/github/release/johanvx/typst-undergradmath)][latest-release]
 ![Checks status](https://badgers.space/github/checks/johanvx/typst-undergradmath)
@@ -6,6 +7,7 @@
 A [Typst] port of [undergradmath].
 
 ## Limitations
+
 The following limitations are also annotated in the [document][latest-release].
 
 - [ ] Script letters, such as $\mathscr{P}$ form `\mathscr{P}`, are unavailable.
@@ -29,13 +31,25 @@ The following limitations are also annotated in the [document][latest-release].
       There are in fact some amazing Typst ports of siunitx, such as [metro] and [unify].
 
 ## License
+
 [Like undergradmath], typst-undergradmath is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License][cc-by-sa].
+
+## Contributing to typst-undergradmath
+
+If you're interested in contributing to this project, feel free to comment on
+existing issues, open new issues and create pull requests.
+
+If you create a pull request, make sure to observe the following rules:
+
+1. adopt [Conventional Commits], and
+2. keep the document two-page.
 
 <!-- Links -->
 
 [#2]: https://github.com/johanvx/typst-undergradmath/issues/2
 [#10]: https://github.com/johanvx/typst-undergradmath/issues/10
 [#16]: https://github.com/johanvx/typst-undergradmath/pull/16
+[Conventional Commits]: https://www.conventionalcommits.org/en/v1.0.0/
 [Like undergradmath]: https://gitlab.com/jim.hefferon/undergradmath/-/blob/5b19eff74454f7c71664f85e8042d7b30fcf9cfb/LICENSE
 [Typst]: https://github.com/typst/typst
 [cc-by-sa]: http://creativecommons.org/licenses/by-sa/4.0/
