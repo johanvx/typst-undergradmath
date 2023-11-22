@@ -3,23 +3,28 @@ on:
   push:
     branches-ignore:
       - main
-
+  pull_request:
 jobs:
   check-changed:
     runs-on: macos-latest
     outputs:
-      modified_files: ${{ steps.changed-files.outputs.modified_files }}
+      modified: ${{ contains(steps.changed-files.outputs.modified_files, 'undergradmath.typ') }}
     steps:
-      - uses: actions/checkout@v3
-      - id: changed-files
-        uses: tj-actions/changed-files@v35
-
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Check changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v40
+      - name: List all modified files
+        run: |
+          echo "List all the files that have been modified: ${{ steps.changed-files.outputs.modified_files }}"
   build-pdf:
     runs-on: macos-latest
     needs: check-changed
-    if: contains(needs.check-changed.outputs.modified_files, 'undergradmath.typ')
+    if: needs.check-changed.outputs.modified == 'true'
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v4
       - name: Update Homebrew
         run: brew update
       - name: Install Typst
