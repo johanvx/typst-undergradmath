@@ -83,7 +83,7 @@
   #text(large, headcolor)[*Typst Math for Undergrads*]
 ])
 
-This is a Typst port of _#LaTeX Math for Undergrads_ by Jim Hefferon.
+This is a Typst port with typst #sys.version of _#LaTeX Math for Undergrads_ by Jim Hefferon.
 The original version is available at #link("https://gitlab.com/jim.hefferon/undergradmath").
 
 = Meaning of annotations
