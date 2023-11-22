@@ -1,0 +1,17 @@
+name: Clean up
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "SemVer"
+        required: true
+        type: string
+jobs:
+  clean-up:
+    runs-on: macos-latest
+    steps:
+      - name: Delete the given tag and release
+        uses: dev-drprasad/delete-tag-and-release@v1.0
+        with:
+          tag_name: "v${{ inputs.version }}"
+          github_token: ${{ secrets.PAT }}
