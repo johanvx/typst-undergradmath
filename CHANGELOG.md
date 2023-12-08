@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [1.2.0](https://github.com/johanvx/typst-undergradmath/compare/v1.1.0..1.2.0) - 2023-11-22
+## [1.2.0](https://github.com/johanvx/typst-undergradmath/compare/v1.1.0..1.2.0) - 2023-12-08
 
 ### Documentation
 
@@ -17,6 +17,8 @@ All notable changes to this project will be documented in this file.
 
 ### Miscellaneous
 
+- Checkout with secrets.PAT - ([e2837c8](https://github.com/johanvx/typst-undergradmath/commit/e2837c8f5a45e130f1309dc16b5cc30280637517))
+- Set author to github-actions[bot] - ([08301b2](https://github.com/johanvx/typst-undergradmath/commit/08301b27e53aa968e9deb0db6d5a4c3614fa674a))
 - Set author and email explicitly - ([cbcbdb4](https://github.com/johanvx/typst-undergradmath/commit/cbcbdb40abf5582672c264dbd40dab7ef980f73b))
 - Try to pass the protection rule - ([8f1a6f3](https://github.com/johanvx/typst-undergradmath/commit/8f1a6f39fd15014ebfef1eb7276d6eca654ccfe8))
 - Fix the repository URL in cliff.toml - ([4eea288](https://github.com/johanvx/typst-undergradmath/commit/4eea288d139f8f60a4f9b4df28ef15424d49393b))
