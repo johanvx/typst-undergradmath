@@ -48,7 +48,7 @@
 #show "?!": box(text(orange, [No idea #emoji.face.unhappy]))
 // Tricky figure numbering
 #set figure(numbering: n => {
-  ([??], [!!], [?!]).at(n - 1)
+  ([??], [!!], [?!]).at(n)
 })
 // No prefix
 #set ref(supplement: "")
@@ -87,12 +87,12 @@ This is a Typst port with typst #sys.version of _#LaTeX Math for Undergrads_ by 
 The original version is available at #link("https://gitlab.com/jim.hefferon/undergradmath").
 
 = Meaning of annotations
-#figure(
-  table(
-    columns: (1fr, 2fr),
-    [??], [Unavailable until typst #sys.version.],
-  )
-) <unavailable>
+// #figure(
+//  table(
+//    columns: (1fr, 2fr),
+//    [??], [Unavailable until typst #sys.version.],
+//  )
+// ) <unavailable>
 #figure(
   table(
     columns: (1fr, 2fr),
