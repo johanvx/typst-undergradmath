@@ -10,7 +10,9 @@ A [Typst] port of [undergradmath].
 
 The following limitations are also annotated in the [document][latest-release].
 
-- [ ] Script letters, such as $\mathscr{P}$ form `\mathscr{P}`, are unavailable.
+- [x] ~Script letters, such as $\mathscr{P}$ form `\mathscr{P}`, are unavailable.~
+      It's possible to get script letters like $\mathscr{P}$ from `cal(P)` by changing the [`stylistic-set` of the `text()` function].
+      The stylistic set to apply is font-specific, so it's necessary to consult the font to know which set is desired.
 - [x] ~Greek letter $\varsigma$ `\u{03C2}` from `\varsigma` is not defined as a symbol and should probably be defined as `sigma.alt`.~
       `sigma.alt` is available as from `typst v0.5.0`.
 - [x] $\emptyset$ from `\emptyset` is available in Typst as `nothing`, while $\varnothing$ from `\varnothing` is not.
@@ -49,6 +51,7 @@ If you create a pull request, make sure to observe the following rules:
 [#2]: https://github.com/johanvx/typst-undergradmath/issues/2
 [#10]: https://github.com/johanvx/typst-undergradmath/issues/10
 [#16]: https://github.com/johanvx/typst-undergradmath/pull/16
+[`stylistic-set` of the `text()` function]: https://typst.app/docs/reference/text/text/#parameters-stylistic-set
 [Conventional Commits]: https://www.conventionalcommits.org/en/v1.0.0/
 [Like undergradmath]: https://gitlab.com/jim.hefferon/undergradmath/-/blob/5b19eff74454f7c71664f85e8042d7b30fcf9cfb/LICENSE
 [Typst]: https://github.com/typst/typst
