@@ -86,9 +86,6 @@
 // Black raw code
 #show raw.where(block: false): it => { it.text }
 
-// Put this here to avoid affecting the title
-#show link: underline
-
 // Two-column layout
 #show: rest => columns(2, rest)
 
@@ -96,6 +93,9 @@
 #align(center, link("https://github.com/johanvx/typst-undergradmath")[
   #text(large, headcolor)[*Typst Math for Undergrads*]
 ])
+
+// Put this here to avoid affecting the title
+#show link: underline
 
 This is a Typst port with typst #sys.version of _#LaTeX Math for Undergrads_ by Jim Hefferon.
 The original version is available at #link("https://gitlab.com/jim.hefferon/undergradmath").
