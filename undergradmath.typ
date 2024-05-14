@@ -1,8 +1,28 @@
 // Meta data
 #set document(title: "Typst Math for Undergrads", author: "johanvx")
 
-// Margin
-#set page(margin: 0.5in)
+// headcolor
+#let headcolor = rgb("004225")
+
+// Margin and footer
+#set page(
+  margin: 0.5in,
+  footer: context {
+    if counter(page).display() == "2" {
+      grid(
+        columns: (1fr, 1fr),
+        [],
+        block(
+          inset: 4pt,
+          stroke: (top: headcolor),
+          text(headcolor)[johanvx (https://github.com/johanvx) #h(1fr) #datetime.today().display()]
+        )
+      )
+    } else {
+      []
+    }
+  }
+)
 
 // Font size
 #let scriptsize = 7pt
@@ -37,10 +57,7 @@
   box(L + kern(-0.36em) + A + kern(-0.15em) + TeX)
 })
 
-// Update date
-#let date = datetime.today().display()
-
-// Unavailable (last check date)
+// Unavailable (last check version)
 #show "??": box(text(red, [v#sys.version #emoji.crossmark]))
 // Tricky
 #show "!!": box(text(blue, emoji.drops))
@@ -55,9 +72,6 @@
 
 // Justified paragraphs
 #set par(justify: true)
-
-// headcolor
-#let headcolor = rgb("004225")
 
 // Run-in sections, like LaTeX \paragraph
 #show heading.where(
@@ -556,11 +570,3 @@ For permutations use $n^(underline(r))$ from `n^(underline(r))` (some authors us
 
 = For more
 See also the Typst Documentation at #link("https://typst.app/docs").
-
-#v(1fr)
-
-#block(
-  inset: 4pt,
-  stroke: (top: headcolor),
-  text(headcolor)[johanvx (https://github.com/johanvx) #h(1fr) #date]
-)
