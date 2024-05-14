@@ -2,7 +2,30 @@
 
 All notable changes to this project will be documented in this file.
 
-## [1.2.0](https://github.com/johanvx/typst-undergradmath/compare/v1.1.0..1.2.0) - 2023-12-08
+## [1.3.0](https://github.com/johanvx/typst-undergradmath/compare/v1.2.0..1.3.0) - 2024-05-14
+
+### Bug Fixes
+
+- Stop underlining the title - ([2272ede](https://github.com/johanvx/typst-undergradmath/commit/2272edeec374255cbd8b80377895573d248e68a7))
+
+### Documentation
+
+- Add instructions for obtaining script letters - ([e98a15a](https://github.com/johanvx/typst-undergradmath/commit/e98a15a1dc9537905b0aa04a571cd5b0de2fecc2))
+
+### Features
+
+- Provide a simpler approach to get `\varnothing` in LaTeX - ([605b7b9](https://github.com/johanvx/typst-undergradmath/commit/605b7b94f8fcf5ff753df3e840da456a11c93b4a))
+- Add script letters - ([2334574](https://github.com/johanvx/typst-undergradmath/commit/2334574f5e51cb531ef660e71975b831d49dd01f))
+
+### Miscellaneous
+
+- Remove `@unavailable` figure - ([d314d33](https://github.com/johanvx/typst-undergradmath/commit/d314d33c9145859de72e43037673560fbaabc909))
+
+### Refactor
+
+- Make the footer an acutal footer - ([d3b5eb7](https://github.com/johanvx/typst-undergradmath/commit/d3b5eb7ba515af7e7b107050b1a841fdbde5242f))
+
+## [1.2.0](https://github.com/johanvx/typst-undergradmath/compare/v1.1.0..v1.2.0) - 2023-12-08
 
 ### Documentation
 
