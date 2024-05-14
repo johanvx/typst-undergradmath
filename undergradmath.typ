@@ -453,7 +453,7 @@ Definition by cases can be easily obtained with the `cases` function.
 
 = Spacing in mathematics
 Improve $sqrt(2) x$ to $sqrt(2) thin x$ with a thin space, as in `sqrt(2) thin x`.
-Slightly wider are `medium` and `thick` (the three are in ratio $3 : 4 : 5$).
+Slightly wider are `med` and `thick` (the three are in ratio $3 : 4 : 5$).
 Bigger space are: `quad` for $-> quad <-$ and `wide` for $-> wide <-$, which are useful between parts of a display.
 Get arbitrary space with the `h` function.
 For example, use `#h(-0.1667em)` for `\!` in #LaTeX.
@@ -519,8 +519,8 @@ The last three here are display style.
     f: RR -> RR
     ```
   ],
-  [$ "9.8" "m/s"^2 $],
-  [`"9.8" "m/s"^2` @tricky],
+  [$ 9.8 "m/s"^2 $],
+  [`9.8 "m/s"^2` @tricky],
   [$ lim_(h->0) (f(x+h)-f(x))/h $],
   [
     ```
