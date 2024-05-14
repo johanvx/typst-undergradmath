@@ -206,14 +206,19 @@ Get the set complement $A^(sans(c))$ with `A^(sans(c))` (or $A^(complement)$ wit
 //     through Character Variant cv01. The fontsetup package provides the option
 //     'varnothing' to easily switch to the alternative character.
 
-// https://mirrors.sustech.edu.cn/CTAN/fonts/newcomputermodern/doc/newcm-doc.pdf
-// The NewComputerModern FontFamily §13.3
+// http://mirrors.ctan.org/fonts/newcomputermodern/doc/newcm-doc.pdf
+//
+// Version 5.1
+//
+// The NewComputerModern FontFamily §14.5
 // The Math fonts provide the character \varnothing (⌀, U+2300), as an alternative to \emptyset (a slashed zero), through Character Variant cv01.
 // The fontsetup package provides the option ‘varnothing’ to easily switch to the alternative character.
 
-/ Remark: Using `diameter` for `\varnothing` may cause some confusion. However, #LaTeX also uses $diameter$ (`\u{2300}`) instead of $\u{2205}$ (`\u{2205}`), see #link("https://mirrors.sustech.edu.cn/CTAN/fonts/newcomputermodern/doc/newcm-doc.pdf")[newcm $section$13.3].
-  Another solution is to use `text(font: "Fira Sans", nothing)`, but the resultant glyph $text(font: "Fira Sans", nothing)$ is subtly different from the widely used one.
-  Ultimately, the choice is always *your decision*.
+/ Remark: Using `diameter` for `\varnothing` may cause some confusion.
+  However, in #LaTeX, the `\varnothing` provided through Character Variant `cv01` is also `diameter`
+  (see #link("http://mirrors.ctan.org/fonts/newcomputermodern/doc/newcm-doc.pdf")[newcm $section$14.5]).
+  So a simple solution with the default math font _New Computer Modern Math_ is to define a new symbol `varnothing` with `#let varnothing = math.diameter`.
+  Other solutions can be found in #link("https://sitandr.github.io/typst-examples-book/book/basics/math/symbols.html#empty-set")[Typst Examples Book].
 
 = Decorations
 #align(center, table(
