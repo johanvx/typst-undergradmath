@@ -29,8 +29,9 @@ The following limitations are also annotated in the [document][latest-release].
 - [x] ~LaTeX arrays (i.e., matrices without fences) are unavailable, but it's easy to get them with the `grid` function.
       For math mode, it would be nice to add a new option `""` for `delim` of the `mat` function.~
       It's actually available with `$mat(delim: #none, ..)$`.
-- [ ] ~No idea with spacing between values and units. It would be really great to have something like [siunitx].~
-      There are in fact some amazing Typst ports of siunitx, such as [metro] and [unify].
+- [x] ~No idea with spacing between values and units. It would be really great to have something like [siunitx].~
+      The space between values and units can be `thin` (`\u{2009}`), as mentioned in [#17].
+      There are also some amazing Typst ports of siunitx, such as [metro] and [unify].
 
 ## License
 
@@ -51,6 +52,7 @@ If you create a pull request, make sure to observe the following rules:
 [#2]: https://github.com/johanvx/typst-undergradmath/issues/2
 [#10]: https://github.com/johanvx/typst-undergradmath/issues/10
 [#16]: https://github.com/johanvx/typst-undergradmath/pull/16
+[#17]: https://github.com/johanvx/typst-undergradmath/issues/17
 [`stylistic-set` of the `text()` function]: https://typst.app/docs/reference/text/text/#parameters-stylistic-set
 [Conventional Commits]: https://www.conventionalcommits.org/en/v1.0.0/
 [Like undergradmath]: https://gitlab.com/jim.hefferon/undergradmath/-/blob/5b19eff74454f7c71664f85e8042d7b30fcf9cfb/LICENSE

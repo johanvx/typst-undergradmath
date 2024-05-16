@@ -519,8 +519,8 @@ The last three here are display style.
     f: RR -> RR
     ```
   ],
-  [$ 9.8 "m/s"^2 $],
-  [`9.8 "m/s"^2` @tricky],
+  [$ 9.8 thin "m/s"^2 $],
+  [`9.8 thin "m/s"^2` @tricky],
   [$ lim_(h->0) (f(x+h)-f(x))/h $],
   [
     ```
