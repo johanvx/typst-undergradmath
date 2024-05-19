@@ -2,7 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
-## [1.3.0](https://github.com/johanvx/typst-undergradmath/compare/v1.2.0..1.3.0) - 2024-05-14
+## [1.4.0](https://github.com/johanvx/typst-undergradmath/compare/v1.3.0..1.4.0) - 2024-05-19
+
+### Features
+
+- Use `thin` for the space between values and units (#43) - ([ca9cc03](https://github.com/johanvx/typst-undergradmath/commit/ca9cc039dd1cc284ff841498d430526134bfb7e9))
+- Update spacing description (#42) - ([74a826a](https://github.com/johanvx/typst-undergradmath/commit/74a826a4d0e4655fc60591115b19d065fc88dfd9))
+
+## [1.3.0](https://github.com/johanvx/typst-undergradmath/compare/v1.2.0..v1.3.0) - 2024-05-14
 
 ### Bug Fixes
 
