@@ -42,20 +42,20 @@
 #set table(stroke: none, align: horizon + left, inset: 0pt, row-gutter: 0.45em)
 
 // LaTeX and TeX logos
-#let TeX = style(styles => {
-  let e = measure(text(normalsize, "E"), styles)
+#let TeX = context {
+  let e = measure(text(normalsize, "E"))
   let T = "T"
   let E = text(normalsize, baseline: e.height / 2, "E")
   let X = "X"
   box(T + kern(-0.1667em) + E + kern(-0.125em) + X)
-})
-#let LaTeX = style(styles => {
-  let l = measure(text(10pt, "L"), styles)
-  let a = measure(text(7pt, "A"), styles)
+}
+#let LaTeX = context {
+  let l = measure(text(10pt, "L"))
+  let a = measure(text(7pt, "A"))
   let L = "L"
   let A = text(7pt, baseline: a.height - l.height, "A")
   box(L + kern(-0.36em) + A + kern(-0.15em) + TeX)
-})
+}
 
 // Unavailable (last check version)
 #show "??": box(text(red, [v#sys.version #emoji.crossmark]))
