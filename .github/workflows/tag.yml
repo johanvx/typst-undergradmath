@@ -19,7 +19,7 @@ jobs:
           fetch-tags: true
       - name: Get previous tag
         id: check-tag
-        uses: mathieudutour/github-tag-action@v6.1
+        uses: mathieudutour/github-tag-action@v6.2
         with:
           dry_run: true
           github_token: ${{ secrets.PAT }}
@@ -74,7 +74,7 @@ jobs:
           author_email: 41898282+github-actions[bot]@users.noreply.github.com
           message: "release: update changelog for ${{ needs.check-version.outputs.version }} release"
       - name: Add tag
-        uses: mathieudutour/github-tag-action@v6.1
+        uses: mathieudutour/github-tag-action@v6.2
         if: steps.add-changelog.outputs.committed == 'true'
         with:
           commit_sha: ${{ steps.add-changelog.outputs.commit_long_sha }}
