@@ -181,7 +181,7 @@ Get script letters, such as $cal(P)$ from `$cal(P)$`, by changing the `stylistic
   align: (right, left, right, left, right, left),
   column-gutter: (1em, 1.5em, 1em, 1.5em, 1em),
   [$union$], [`union`], [$RR$], [`RR`, `bb(R)`], [$forall$], [`forall`],
-  [$sect$], [`sect`], [$bb(Z)$], [`ZZ`, `bb(Z)`], [$exists$], [`exists`],
+  [$inter$], [`inter`], [$bb(Z)$], [`ZZ`, `bb(Z)`], [$exists$], [`exists`],
   [$subset$], [`subset`], [$bb(Q)$], [`QQ`, `bb(Q)`], [$not$], [`not`],
   [$subset.eq$], [`subset.eq`], [$bb(N)$], [`NN`, `bb(N)`], [$or$], [`or`],
   [$supset$], [`supset`], [$bb(C)$], [`CC`, `bb(C)`], [$and$], [`and`],
@@ -338,7 +338,7 @@ These do the same.
   row-gutter: 0.5em,
   [$integral$], [`integral`], [$integral.double$], [`integral.double`],
   [$integral.triple$], [`integral.triple`], [$integral.cont$], [`integral.cont`],
-  [$union.big$], [`union.big`], [$sect.big$], [`sect.big`],
+  [$union.big$], [`union.big`], [$inter.big$], [`inter.big`],
 ))
 
 = Fences
