@@ -2,7 +2,29 @@
 
 All notable changes to this project will be documented in this file.
 
-## [1.4.0](https://github.com/johanvx/typst-undergradmath/compare/v1.3.0..1.4.0) - 2024-05-19
+## [1.5.0](https://github.com/johanvx/typst-undergradmath/compare/v1.4.0..1.5.0) - 2025-04-13
+
+### Bug Fixes
+
+- Use a semantically correct code for the unit example - ([50b81e8](https://github.com/johanvx/typst-undergradmath/commit/50b81e839332bf3ead76acf239fcc43c5f75124a))
+- Replace the deprecated `sect` with `inter` - ([755eaed](https://github.com/johanvx/typst-undergradmath/commit/755eaedb3ef0e1af5e581248ef5955e83baf176c))
+- Replace the removed `style` with a `context` expression - ([04578d4](https://github.com/johanvx/typst-undergradmath/commit/04578d4c361c3ccf0807653966515b4547b6f200))
+
+### Features
+
+- Use newly introduced `asymp` symbol - ([2401863](https://github.com/johanvx/typst-undergradmath/commit/24018638b28783b114ac5bf202313ea732292cf0))
+
+### Miscellaneous
+
+- Remove homebrew/cask-fonts tap - ([d40067e](https://github.com/johanvx/typst-undergradmath/commit/d40067ec1c478bbbd314e7d67af7f935c88b5cfb))
+- Update mathieudutour/github-tag-action from v6.1 to v6.2 - ([9d51d58](https://github.com/johanvx/typst-undergradmath/commit/9d51d5887424a58d1d9841d003fa60777568a014))
+- Update actions/upload-artifact from deprecated v3 to v4 - ([708f0e2](https://github.com/johanvx/typst-undergradmath/commit/708f0e2cbeb783351ed550801a5c01e7f7f57019))
+
+### Styling
+
+- Format code with typstyle - ([6ddf040](https://github.com/johanvx/typst-undergradmath/commit/6ddf040a40d6b823257b7ee54b323b7d65937bd6))
+
+## [1.4.0](https://github.com/johanvx/typst-undergradmath/compare/v1.3.0..v1.4.0) - 2024-05-19
 
 ### Features
 
