@@ -295,7 +295,7 @@ $ cosec x = 1/(sin x) $
   [$<<$], [`<<`, `lt.double`], [$tilde.equiv$], [`tilde.equiv`], [$*$], [`*`, `ast`],
   [$>>$], [`>>`, `gt.double`], [$tilde.nequiv$], [`tilde.nequiv`], [$divides$], [`divides`],
   [$approx$], [`approx`], [$tilde$], [`tilde`], [$divides.not$], [`divides.not`],
-  [$\u{224D}$], [`\u{224D}` @tricky], [$tilde.eq$], [`tilde.eq`], [$n!$], [`n!`],
+  [$asymp$], [`asymp`], [$tilde.eq$], [`tilde.eq`], [$n!$], [`n!`],
   [$equiv$], [`equiv`], [$tilde.not$], [`tilde.not`], [$diff$], [`diff`],
   [$prec$], [`prec`], [$plus.circle$], [`plus.circle`], [$nabla$], [`nabla`],
   [$prec.eq$], [`prec.eq`], [$minus.circle$], [`minus.cirle`], [$planck.reduce$], [`planck.reduce`],
