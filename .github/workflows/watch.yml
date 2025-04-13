@@ -30,9 +30,7 @@ jobs:
       - name: Install Typst
         run: brew install typst
       - name: Install fonts
-        run: |
-          brew tap homebrew/cask-fonts
-          brew install --cask font-twitter-color-emoji
+        run: brew install --cask font-twitter-color-emoji
       - name: Build PDF
         run: typst compile undergradmath.typ
       - name: Upload PDF as artifact
