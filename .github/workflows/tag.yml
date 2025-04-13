@@ -30,7 +30,7 @@ jobs:
           git rev-list -n 1 "tags/${{ steps.check-tag.outputs.previous_tag }}" >> $GITHUB_OUTPUT
       - name: Check changed files
         id: changed-files
-        uses: tj-actions/changed-files@v41
+        uses: tj-actions/changed-files@v46
         with:
           base_sha: ${{ steps.get-base.outputs.base }}
       - name: Output the version
