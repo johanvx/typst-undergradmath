@@ -2,7 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
-## [1.5.0](https://github.com/johanvx/typst-undergradmath/compare/v1.4.0..1.5.0) - 2025-04-13
+## [1.5.1](https://github.com/johanvx/typst-undergradmath/compare/v1.5.0..1.5.1) - 2025-04-13
+
+### Bug Fixes
+
+- Update the link to the Typst array - ([842fb87](https://github.com/johanvx/typst-undergradmath/commit/842fb872171bd0fc818a616b920675e31ed033fd))
+
+## [1.5.0](https://github.com/johanvx/typst-undergradmath/compare/v1.4.0..v1.5.0) - 2025-04-13
 
 ### Bug Fixes
 
