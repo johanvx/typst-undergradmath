@@ -154,8 +154,10 @@ Use as in `$cal(A)$`.
 
 $ cal(A B C D E F G H I J K L M N O P Q R S T U V W X Y Z) $
 
-#show math.equation: set text(stylistic-set: 1)
-Get script letters, such as $cal(P)$ from `$cal(P)$`, by changing the `stylistic-set` parameter of `text()` to the corresponding set.
+// #show math.equation: set text(stylistic-set: 1)
+// Get script letters, such as $cal(P)$ from `$cal(P)$`, by changing the `stylistic-set` parameter of `text()` to the corresponding set.
+Get script letters by using `scr`, such as $scr(P)$ from `$scr(P)$`.
+See #link("https://typst.app/docs/reference/math/variants/#functions-scr")[`scr`] for more information.
 
 = Greek
 #align(
