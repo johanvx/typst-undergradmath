@@ -9,13 +9,14 @@
   margin: 0.5in,
   footer: context {
     if counter(page).display() == "2" {
+      set text(headcolor)
       grid(
         columns: (1fr, 1fr),
         [],
         block(
           inset: 4pt,
           stroke: (top: headcolor),
-          text(headcolor)[johanvx (https://github.com/johanvx) #h(1fr) #datetime.today().display()],
+          [johanvx (https://github.com/johanvx) #h(1fr) #datetime.today().display()],
         ),
       )
     } else {
@@ -132,7 +133,7 @@ Your document should contain at least this.
   "",
   ```
   -- document body here --
-  ```
+  ```,
 )
 
 = Common constructs
@@ -142,10 +143,12 @@ Your document should contain at least this.
     columns: 4,
     align: (right, left, right, left),
     column-gutter: (1em, 1.5em, 1em),
-    [$x^2$], [`x^2`],
-    [$sqrt(2)$, $root(n, 3)$], [`sqrt(2)`, `root(n, 3)`],
-    [$x_(i, j)$], [`x_(i, j)`],
-    [$2 / 3$, $2 \/ 3$], [`2 / 3`, `2 \/ 3` or `2 slash 3`], // Maybe use `slash`?
+    [$x^2$], [`x^2`], [$sqrt(2)$, $root(n, 3)$], [`sqrt(2)`, `root(n, 3)`],
+    [$x_(i, j)$],
+    [`x_(i, j)`],
+    [$2 / 3$, $2 \/ 3$],
+    [`2 / 3`, `2 \/ 3` or `2 slash 3`],
+    // Maybe use `slash`?
   ),
 )
 
@@ -337,7 +340,9 @@ $ cosec x = 1 / (sin x) $
     columns: 6,
     align: (right, left, right, left, right, left),
     column-gutter: (0.5em, 1em, 0.5em, 1em, 0.5em),
+
     [$<$], [`<`, `lt`], [$angle$], [`angle`], [$dot$], [`dot`],
+
     [$<=$],
     [`<=`, `lt.eq`],
     [$angle.arc$],
@@ -346,8 +351,11 @@ $ cosec x = 1 / (sin x) $
     [`plus.minus`],
 
     [$>$], [`>`, `gt`], [$ell$], [`ell`], [$minus.plus$], [`minus.plus`],
+
     [$>=$], [`>=`, `gt.eq`], [$parallel$], [`parallel`], [$times$], [`times`],
+
     [$!=$], [`!=`, `eq.not`], [$45 degree$], [`45 degree`], [$div$], [`div`],
+
     [$<<$],
     [`<<`, `lt.double`],
     [$tilde.equiv$],
@@ -571,9 +579,9 @@ Definition by cases can be easily obtained with the `cases` function.
     [
       $
         f_n = cases(
-      a &"if" n = 0,
-      r dot f_(n - 1) &"else"
-    )
+          a & "if" n = 0,
+          r dot f_(n - 1) & "else"
+        )
       $
     ],
     [
@@ -642,8 +650,8 @@ Align equations using `&`
     column-gutter: 1em,
     [
       $
-        nabla dot bold(D) &= rho \
-        nabla dot bold(B) &= 0
+        nabla dot bold(D) & = rho \
+        nabla dot bold(B) & = 0
       $
     ],
     ```
@@ -687,8 +695,8 @@ The last three here are display style.
     ],
 
     [$
-        nabla = bold(i) dif / (dif x) + bold(j) dif / (dif y) + bold(k) dif / (dif z)
-      $],
+      nabla = bold(i) dif / (dif x) + bold(j) dif / (dif y) + bold(k) dif / (dif z)
+    $],
     [
       ```
       nabla = bold(i) dif / (dif x) + bold(j) dif / (dif y) + bold(k) dif / (dif z)
