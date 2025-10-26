@@ -208,7 +208,7 @@ See #link("https://typst.app/docs/reference/math/variants/#functions-scr")[`scr`
     [`tack.r`],
 
     [$in$], [`in`], [$nothing$], [`nothing`], [$models$], [`models`],
-    [$in.not$], [`in.not`], [$alef$], [`alef`], [$without$], [`without`],
+    [$in.not$], [`in.not`], [$aleph$], [`aleph`], [$without$], [`without`],
   ),
 )
 
@@ -370,35 +370,23 @@ $ cosec x = 1 / (sin x) $
     [`divides.not`],
 
     [$asymp$], [`asymp`], [$tilde.eq$], [`tilde.eq`], [$n!$], [`n!`],
-    [$equiv$], [`equiv`], [$tilde.not$], [`tilde.not`], [$diff$], [`diff`],
-    [$prec$], [`prec`], [$plus.circle$], [`plus.circle`], [$nabla$], [`nabla`],
-    [$prec.eq$],
-    [`prec.eq`],
-    [$minus.circle$],
-    [`minus.cirle`],
-    [$planck.reduce$],
-    [`planck.reduce`],
 
-    [$succ$],
-    [`succ`],
-    [$dot.circle$],
-    [`dot.circle`],
-    [$compose$],
-    [`compose`],
+    [$equiv$],
+    [`equiv`],
+    [$tilde.not$],
+    [`tilde.not`],
+    [$partial$],
+    [`partial`],
 
-    [$succ.eq$],
-    [`succ.eq`],
-    [$times.circle$],
-    [`times.circle`],
-    [$star$],
-    [`star`],
+    [$prec$], [`prec`], [$plus.o$], [`plus.o`], [$nabla$], [`nabla`],
 
-    [$prop$],
-    [`prop`],
-    [$\u{2298}$],
-    [`\u{2298}` @tricky],
-    [$sqrt("")$],
-    [`sqrt("")`],
+    [$prec.eq$], [`prec.eq`], [$minus.o$], [`minus.o`], [$planck$], [`planck`],
+
+    [$succ$], [`succ`], [$dot.o$], [`dot.o`], [$compose$], [`compose`],
+
+    [$succ.eq$], [`succ.eq`], [$times.o$], [`times.o`], [$star$], [`star`],
+
+    [$prop$], [`prop`], [$slash.o$], [`slash.o`], [$sqrt("")$], [`sqrt("")`],
 
     [$\u{2250}$],
     [`\u{2250}` @tricky],
@@ -469,8 +457,8 @@ These do the same.
     row-gutter: 0.5em,
     [$()$],
     [`()`],
-    [$angle.l angle.r$],
-    [`angle.l angle.r`],
+    [$chevron.l chevron.r$],
+    [`chevron.l chevron.r`],
     [$abs("")$],
     [`abs("")`],
 
@@ -502,10 +490,10 @@ To have them grow with the enclosed formula, also use the `lr` function.
   table(
     columns: 2,
     column-gutter: 1em,
-    [$ lr(angle.l i, 2^(2^i) angle.r) $],
+    [$ lr(chevron.l i, 2^(2^i) chevron.r) $],
     [
       ```
-      lr(angle.l i, 2^(2^i) angle.r)
+      lr(chevron.l i, 2^(2^i) chevron.r)
       ```
     ],
   ),
