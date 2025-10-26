@@ -90,12 +90,10 @@
 #show: rest => columns(2, rest)
 
 // Title
-#align(
-  center,
-  link("https://github.com/johanvx/typst-undergradmath")[
-    #text(large, headcolor)[*Typst Math for Undergrads*]
-  ],
-)
+#show title: set align(center)
+#show title: set text(large, headcolor)
+#show title: it => link("https://github.com/johanvx/typst-undergradmath")[#it]
+#title()
 
 // Put this here to avoid affecting the title
 #show link: underline
