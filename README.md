@@ -13,6 +13,8 @@ The following limitations are also annotated in the [document][latest-release].
 - [x] ~Script letters, such as $\mathscr{P}$ form `\mathscr{P}`, are unavailable.~
       It's possible to get script letters like $\mathscr{P}$ from `cal(P)` by changing the [`stylistic-set` of the `text()` function].
       The stylistic set to apply is font-specific, so it's necessary to consult the font to know which set is desired.
+      As from `typst v0.14.0`, $\mathscr{P}$ can be easily obtained with `scr(P)`.
+      See `scr` for more information.
 - [x] ~Greek letter $\varsigma$ `\u{03C2}` from `\varsigma` is not defined as a symbol and should probably be defined as `sigma.alt`.~
       `sigma.alt` is available as from `typst v0.5.0`.
 - [x] $\emptyset$ from `\emptyset` is available in Typst as `nothing`, while $\varnothing$ from `\varnothing` is not.
