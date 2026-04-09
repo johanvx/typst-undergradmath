@@ -13,7 +13,7 @@ jobs:
       version: ${{ steps.output-version.outputs.version }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
           fetch-tags: true
@@ -30,7 +30,7 @@ jobs:
           git rev-list -n 1 "tags/${{ steps.check-tag.outputs.previous_tag }}" >> $GITHUB_OUTPUT
       - name: Check changed files
         id: changed-files
-        uses: tj-actions/changed-files@v46
+        uses: tj-actions/changed-files@v47
         with:
           base_sha: ${{ steps.get-base.outputs.base }}
       - name: Output the version
@@ -52,7 +52,7 @@ jobs:
       contents: write
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
           fetch-tags: true
@@ -67,7 +67,7 @@ jobs:
           git cliff -vv -t ${{ needs.check-version.outputs.version }} -o CHANGELOG.md
       - name: Add changelog and commit
         id: add-changelog
-        uses: EndBug/add-and-commit@v9
+        uses: EndBug/add-and-commit@v10
         with:
           add: 'CHANGELOG.md'
           author_name: github-actions[bot]
