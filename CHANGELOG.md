@@ -2,7 +2,25 @@
 
 All notable changes to this project will be documented in this file.
 
-## [1.5.1](https://github.com/johanvx/typst-undergradmath/compare/v1.5.0..1.5.1) - 2025-04-13
+## [2.0.0](https://github.com/johanvx/typst-undergradmath/compare/v1.5.1..2.0.0) - 2026-04-09
+
+### Features
+
+- Add alt text in equations for accessibility - ([e144061](https://github.com/johanvx/typst-undergradmath/commit/e14406129d02570ac8681189e0fb58c90e6e4e96))
+- Use new typst 0.14.0 symbols - ([3db4b89](https://github.com/johanvx/typst-undergradmath/commit/3db4b89e825a1dbe861894a3ca6cc97129addbdd))
+- Use `scr` for script letters in math mode - ([15343ab](https://github.com/johanvx/typst-undergradmath/commit/15343ab2bbdf426ad52bcc949997692a1b02e0fc))
+- Use title element for displaying the document title - ([7e990d1](https://github.com/johanvx/typst-undergradmath/commit/7e990d195bedf0aaa0140f3a3f178f3debf3f048))
+
+### Miscellaneous
+
+- Update GitHub Actions to latest versions - ([84c7f3c](https://github.com/johanvx/typst-undergradmath/commit/84c7f3c220792cec977f5f7227693735313a2eb8))
+- Enable PDF/UA-1 and a11y in PDF builds - ([466ad74](https://github.com/johanvx/typst-undergradmath/commit/466ad74cd55ea5e095cd0b1706c4db7ccdb95c16))
+
+### Styling
+
+- Format code - ([7dba517](https://github.com/johanvx/typst-undergradmath/commit/7dba517704c7f9f0505fb9db15cc3064b9985b75))
+
+## [1.5.1](https://github.com/johanvx/typst-undergradmath/compare/v1.5.0..v1.5.1) - 2025-04-13
 
 ### Bug Fixes
 
