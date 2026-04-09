@@ -31,8 +31,8 @@ jobs:
         run: brew install typst
       - name: Install fonts
         run: brew install --cask font-twitter-color-emoji
-      - name: Build PDF
-        run: typst compile undergradmath.typ
+      - name: Build PDF with PDF/UA-1
+        run: typst compile --pdf-standard ua-1 undergradmath.typ
       - name: Upload PDF as artifact
         uses: actions/upload-artifact@v4
         with:
