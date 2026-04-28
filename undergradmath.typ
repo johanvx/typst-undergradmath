@@ -986,9 +986,9 @@ The last three here are display style.
     eqn(
       alt: "9.8 meters per second squared",
       block: true,
-      $ 9.8 thin "m" slash "s"^2 $,
+      $ 9.8 thin "m"slash"s"^2 $,
     ),
-    [`9.8 thin "m" slash "s"^2` @tricky],
+    [`9.8 thin "m"slash"s"^2` @tricky],
 
     eqn(
       alt: "the limit as h approaches zero of f of x plus h minus f of x, divided by h",
