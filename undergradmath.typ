@@ -1033,7 +1033,7 @@ For modulo, there is a symbol #eqn(alt: "congruent to", $equiv$) from `equiv` an
 For combinations the binomial symbol #eqn(alt: "n choose k", $binom(n, k)$) is from `binom(n, k)`.
 This resizes to be bigger in a display.
 
-For permutations use #eqn(alt: "n falling factorial r", $n^(underline(r))$) from `n^(underline(r))` (some authors use #eqn(alt: "n permute r", $P(n, r)$), or #eqn(alt: "r-permutation of n", $""_n P_r$) from `""_n P_r`).
+For permutations use #eqn(alt: "n falling factorial r", $n^(underline(r))$) from `n^(underline(r))` (some authors use #eqn(alt: "n permute r", $P(n, r)$), or #eqn(alt: "r-permutation of n", $attach(P, bl: n)_r$) from `attach(P, bl: n)_r`).
 
 = Statistics examples
 #align(
