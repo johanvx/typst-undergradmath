@@ -890,7 +890,7 @@ Definition by cases can be easily obtained with the `cases` function.
 = Spacing in mathematics
 Improve #eqn(alt: "square root of two times x", $sqrt(2) x$) to #eqn(alt: "square root of two, thin space, x", $sqrt(2) thin x$) with a thin space, as in `sqrt(2) thin x`.
 Slightly wider are `med` and `thick` (the three are in ratio #eqn(alt: "3 to 4 to 5", $3 : 4 : 5$)).
-Bigger space are: `quad` for #eqn(alt: "A right arrow, followed by a quad space, then a left arrow. The quad space is about the width of the capital letter 'M'.", $-> quad <-$) and `wide` for #eqn(alt: "A right arrow, followed by a wide space, then a left arrow. The wide space is about twice the width of the capital letter 'M'.", $-> wide <-$), which are useful between parts of a display.
+Bigger space are: `quad` for #eqn(alt: "A right arrow, followed by a quad space, then a left arrow. The quad space is about the width of the capital letter 'M'.", box[$-> quad <-$]) and `wide` for #eqn(alt: "A right arrow, followed by a wide space, then a left arrow. The wide space is about twice the width of the capital letter 'M'.", $-> wide <-$), which are useful between parts of a display.
 Get arbitrary space with the `h` function.
 For example, use `#h(-0.1667em)` for `\!` in #LaTeX.
 
