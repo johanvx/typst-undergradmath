@@ -623,8 +623,8 @@ $ cosec x = 1/(sin x) $
     eqn(alt: "square root", $sqrt("")$),
     [`sqrt("")`],
 
-    eqn(alt: "approaches the limit", $\u{2250}$),
-    [`\u{2250}` @tricky],
+    eqn(alt: "approaches the limit", $eq.dot$),
+    [`eq.dot`],
     eqn(alt: "upwards harpoon with barb rightwards", $harpoon.tr$),
     [`harpoon.tr`],
     eqn(alt: "check mark", $checkmark$),
