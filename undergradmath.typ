@@ -84,8 +84,11 @@
   it.body + h(0.67em),
 )
 
-// Black raw code
-#show raw.where(block: false): it => { it.text }
+#set raw(lang: "typm")
+#let monospace = text.with(
+  font: "DejaVu Sans Mono",
+  size: 0.8em
+)
 
 // Two-column layout
 #show: rest => columns(2, rest)
@@ -130,14 +133,14 @@ The original version is available at #link("https://gitlab.com/jim.hefferon/unde
 
 = Rule One
 Any mathematics at all, even a single character, gets a mathematical setting.
-Thus, for "the value of #eqn(alt: "x", $x$) is #eqn(alt: "7", $7$)" enter `the value of $x$ is $7$`.
+Thus, for "the value of #eqn(alt: "x", $x$) is #eqn(alt: "7", $7$)" enter ```typ the value of $x$ is $7$```.
 
 = Template
 Your document should contain at least this.
 
 #grid(
   "",
-  ```
+  ```typ
   -- document body here --
   ```,
 )
@@ -163,7 +166,7 @@ Your document should contain at least this.
 )
 
 = Calligraphic letters
-Use as in `$cal(A)$`.
+Use as in ```typ $cal(A)$```.
 
 #eqn(
   alt: "calligraphic uppercase letters A through Z",
@@ -173,7 +176,7 @@ Use as in `$cal(A)$`.
 
 // #show math.equation: set text(stylistic-set: 1)
 // Get script letters, such as $cal(P)$ from `$cal(P)$`, by changing the `stylistic-set` parameter of `text()` to the corresponding set.
-Get script letters by using `scr`, such as #eqn(alt: "script capital P", $scr(P)$) from `$scr(P)$`.
+Get script letters by using `scr`, such as #eqn(alt: "script capital P", $scr(P)$) from ```typ $scr(P)$```.
 See #link("https://typst.app/docs/reference/math/variants/#functions-scr")[`scr`] for more information.
 
 = Greek
@@ -349,10 +352,10 @@ Get the set complement #eqn(alt: "complement of A", $A^(sans(c))$) with `A^(sans
 // The Math fonts provide the character \varnothing (⌀, U+2300), as an alternative to \emptyset (a slashed zero), through Character Variant cv01.
 // The fontsetup package provides the option ‘varnothing’ to easily switch to the alternative character.
 
-/ Remark: Using `diameter` for `\varnothing` may cause some confusion.
-  However, in #LaTeX, the `\varnothing` provided through Character Variant `cv01` is also `diameter`
+/ Remark: Using `diameter` for ```tex \varnothing``` may cause some confusion.
+  However, in #LaTeX, the ```tex \varnothing``` provided through Character Variant #monospace[cv01] is also `diameter`
   (see #link("http://mirrors.ctan.org/fonts/newcomputermodern/doc/newcm-doc.pdf")[newcm #{ sym.section }14.5]).
-  So a simple solution with the default math font _New Computer Modern Math_ is to define a new symbol `varnothing` with `#let varnothing = math.diameter`.
+  So a simple solution with the default math font _New Computer Modern Math_ is to define a new symbol `varnothing` with ```typ #let varnothing = math.diameter```.
   Other solutions can be found in #link("https://sitandr.github.io/typst-examples-book/book/basics/math/symbols.html#empty-set")[Typst Examples Book].
 
 = Decorations
@@ -497,9 +500,9 @@ Just type them!
 
 #let cosec = math.op("cosec")
 
-If an operator you wish to use does not exist, you can create one using `math.op`. For example, to create the #eqn(alt: "cosecant", $cosec$) operator:
+If an operator you wish to use does not exist, you can create one using ```typc math.op```. For example, to create the #eqn(alt: "cosecant", $cosec$) operator:
 
-```
+```typ
 #let cosec = math.op("cosec")
 $ cosec x = 1/(sin x) $
 ```
@@ -635,7 +638,7 @@ $ cosec x = 1/(sin x) $
 Use `a divides b` for the divides relation, #eqn(alt: "a divides b", $a divides b$), and `a divides.not b` for the negation, #eqn(alt: "a does not divide b", $a divides.not b$).
 Use `|` to get set builder notation #eqn(alt: "the set of all a in S such that a is odd", ${a in S | a "is odd"}$) with `{a in S | a "is odd"}`.
 
-= Arrows
+#block(sticky: true)[= Arrows]
 #align(
   center,
   table(
@@ -847,7 +850,7 @@ Get a matrix with the `mat` function. You can pass an array to it.
       $ mat(a, b; c, d) $,
     ),
     [
-      ```
+      ```typ
       $ mat(a, b; c, d) $
       ```
     ],
@@ -855,7 +858,7 @@ Get a matrix with the `mat` function. You can pass an array to it.
 )
 
 In Typst, #link("https://typst.app/docs/reference/foundations/array")[array] is a sequence of values,
-while in #LaTeX, array is a matrix without fences, which is `$mat(delim: #none, ..)$` in Typst.
+while in #LaTeX, array is a matrix without fences, which is ```typ $mat(delim: #none, ..)$``` in Typst.
 
 For the determinant use `|A|`, text operator #eqn(alt: "determinant", $det$) `det` or `mat(delim: "|", ..)`.
 
@@ -892,10 +895,10 @@ Improve #eqn(alt: "square root of two times x", $sqrt(2) x$) to #eqn(alt: "squar
 Slightly wider are `med` and `thick` (the three are in ratio #eqn(alt: "3 to 4 to 5", $3 : 4 : 5$)).
 Bigger space are: `quad` for #eqn(alt: "A right arrow, followed by a quad space, then a left arrow. The quad space is about the width of the capital letter 'M'.", box[$-> quad <-$]) and `wide` for #eqn(alt: "A right arrow, followed by a wide space, then a left arrow. The wide space is about twice the width of the capital letter 'M'.", $-> wide <-$), which are useful between parts of a display.
 Get arbitrary space with the `h` function.
-For example, use `#h(-0.1667em)` for `\!` in #LaTeX.
+For example, use `#h(-0.1667em)` for ```tex \!``` in #LaTeX.
 
 = Displayed equations
-Display equations in a block level using `$ ... $` with at least one space separating the math content and the `$`.
+Display equations in a block level using ```typ $ ... $``` with at least one space separating the math content and the #monospace[\$].
 
 #align(
   center,
@@ -908,7 +911,7 @@ Display equations in a block level using `$ ... $` with at least one space separ
       $ S = k dot lg W $,
     ),
     [
-      ```
+      ```typ
       $ S = k dot lg W $
       ```
     ],
@@ -931,7 +934,7 @@ You can break into multiple lines.
       $,
     ),
     [
-      ```
+      ```typ
       $ sin(x) = x - x^3 / 3! \
           + x^5 / 5! - dots.h.c $
       ```
@@ -954,7 +957,7 @@ Align equations using `&`
         nabla dot bold(B) & = 0
       $,
     ),
-    ```
+    ```typ
     $ nabla dot bold(D) &= rho \
       nabla dot bold(B) &= 0 $
     ```,
@@ -962,7 +965,7 @@ Align equations using `&`
 )
 
 (the left or right side of an alignment can be empty).
-Get a numbered version by `#set math.equation(numbering: ..)`.
+Get a numbered version by ```typ #set math.equation(numbering: ..)```.
 
 = Calculus examples
 The last three here are display style.
